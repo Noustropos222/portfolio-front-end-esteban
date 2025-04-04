@@ -1,4 +1,4 @@
-import styles from './HeroSyles.module.css';
+import styles from './HeroStyles.module.css';
 import heroImg from '../../assets/hero-img.png';
 import sun from '../../assets/sun.svg';
 import moon from '../../assets/moon.svg';
@@ -20,11 +20,11 @@ function Hero() {
     const LinkedinIcon = theme === 'light' ? LinkedinLight : LinkedinDark;
 
   return (
-    <section id="hero" className={styles. Container}>
+    <section id="hero" className={styles.container}>
         <div className={styles.colorModeContainer}>
             <img
-            className={styles.hero}
             src={heroImg}
+            className={styles.hero}
             alt="Profile picture"
             />
             <img
@@ -51,11 +51,12 @@ function Hero() {
                     <img src={LinkedinIcon} alt="Linkedin icon" />
                 </a>
             </span>
-            <p>
+            <p className={styles.description}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             </p>
             <a href={CV} download>
-                <button className='hover' download>
+                <button className='hover'>
                     Resume
                 </button>
             </a>
